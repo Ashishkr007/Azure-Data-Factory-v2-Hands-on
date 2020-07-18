@@ -1,0 +1,19 @@
+{
+	"name": "Dev_Interactive_cluster",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-1548845656888.5.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "DevKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "my-workspace-token"
+			},
+			"existingClusterId": "0548-154863-sfggg256"
+		}
+	}
+}
