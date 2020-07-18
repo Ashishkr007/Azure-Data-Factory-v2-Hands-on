@@ -1,0 +1,10 @@
+{
+	"name": "ADLSConnection",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://dls2deveastus2riveriq.dfs.core.windows.net"
+		}
+	}
+}
