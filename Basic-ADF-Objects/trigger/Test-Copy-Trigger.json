@@ -1,0 +1,41 @@
+{
+	"name": "Test-Copy-Trigger",
+	"properties": {
+		"description": "Copy csv file with daily execution",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Copy-Data",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fileSystem": "test-datalake",
+					"sourceFilePath": "source/Employee/Pipeline-Demo/Copy-Activity/source/Emp1",
+					"targetFilePath": "target/Employee/Pipeline-Demo/Copy-Activity/source/Emp1",
+					"sourceFileName": "Emp1-20200103.csv",
+					"TargetFileName": "Emp1-20200103.csv",
+					"ExecutionTimestamp": "@trigger().scheduledTime"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-08-19T00:46:00.000Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						30
+					],
+					"hours": [
+						2
+					]
+				}
+			}
+		}
+	}
+}
