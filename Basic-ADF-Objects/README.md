@@ -21,4 +21,4 @@
 
 # Trigger
 ### Copy Pipeline Trigger
-![Pipeline Trigger](images/Pipeline Trigger.png "Pipeline Trigger")
+![Pipeline-Trigger](images/Pipeline-Trigger.png "Pipeline-Trigger")
