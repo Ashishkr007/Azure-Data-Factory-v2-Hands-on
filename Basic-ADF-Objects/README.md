@@ -16,6 +16,7 @@
 ## Pipeline
 ### Copy Pipeline :: ADLS-ADLS :: CSV-CSV 
 ![ADLS-CSV-Copy-Pipeline-1](images/ADLS-CSV-Copy-Pipeline-1.png "ADLS-CSV-Copy-Pipeline-1")
+
 ![ADLS-CSV-Copy-Pipeline-2](images/ADLS-CSV-Copy-Pipeline-2.png "ADLS-CSV-Copy-Pipeline-2")
 
 
