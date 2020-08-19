@@ -19,4 +19,6 @@
 
 ![ADLS-CSV-Copy-Pipeline-2](images/ADLS-CSV-Copy-Pipeline-2.png "ADLS-CSV-Copy-Pipeline-2")
 
-
+# Trigger
+### Copy Pipeline Trigger
+![Pipeline Trigger](images/Pipeline Trigger.png "Pipeline Trigger")
