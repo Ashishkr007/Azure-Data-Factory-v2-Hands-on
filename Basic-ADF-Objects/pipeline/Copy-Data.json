@@ -1,0 +1,115 @@
+{
+	"name": "Copy-Data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ADLS_CSV_File",
+						"type": "DatasetReference",
+						"parameters": {
+							"fileSystem": {
+								"value": "@pipeline().parameters.fileSystem",
+								"type": "Expression"
+							},
+							"filePath": {
+								"value": "@pipeline().parameters.sourceFilePath",
+								"type": "Expression"
+							},
+							"fileName": {
+								"value": "@pipeline().parameters.sourceFileName",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADLS_CSV_File",
+						"type": "DatasetReference",
+						"parameters": {
+							"fileSystem": {
+								"value": "@pipeline().parameters.fileSystem",
+								"type": "Expression"
+							},
+							"filePath": {
+								"value": "@pipeline().parameters.targetFilePath",
+								"type": "Expression"
+							},
+							"fileName": {
+								"value": "@pipeline().parameters.TargetFileName",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"fileSystem": {
+				"type": "string",
+				"defaultValue": "data-layer"
+			},
+			"sourceFilePath": {
+				"type": "string",
+				"defaultValue": "source/Employee/Pipeline-Demo/Copy-Activity/source/Emp1"
+			},
+			"targetFilePath": {
+				"type": "string",
+				"defaultValue": "target/Employee/Pipeline-Demo/Copy-Activity/source/Emp1"
+			},
+			"sourceFileName": {
+				"type": "string",
+				"defaultValue": "Emp1-20200103.csv"
+			},
+			"TargetFileName": {
+				"type": "string",
+				"defaultValue": "Emp1-20200103.csv"
+			}
+		},
+		"annotations": []
+	}
+}
