@@ -1,4 +1,6 @@
 # Execute Databricks Notebook (Job/Intractive cluster)
+In this tutorial, we are execting a databricks notebook from Azure data factory pipeline. We have given example for both type of cluster(Interactive / Job). We have added some parameter that will be passed to notebook for execution. In case of job cluster, liked service has some parameter for 
+
 ### [Pipeline](pipeline/databricks-notebook-exec-example.json) 
 ![databricks-notebook-exec-pipeline](images/databricks-notebook-exec-pipeline.png "databricks-notebook-exec-pipeline")
 ### Pipeline Execution Result
