@@ -1,0 +1,44 @@
+{
+	"name": "Dev_Job_Cluster",
+	"properties": {
+		"parameters": {
+			"clusterVersion": {
+				"type": "string",
+				"defaultValue": "7.0.x-scala2.12"
+			},
+			"nodeType": {
+				"type": "string",
+				"defaultValue": "Standard_DS3_v2"
+			},
+			"workerCount": {
+				"type": "string",
+				"defaultValue": "2:3"
+			},
+			"SparkLogPath": {
+				"type": "string",
+				"defaultValue": "dbfs:/logs/db-job-logs"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-5465654455586.5.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "DevKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "my-workspace-token"
+			},
+			"newClusterNodeType": "@linkedService().nodeType",
+			"newClusterNumOfWorker": "@linkedService().workerCount",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "@linkedService().clusterVersion",
+			"newClusterLogDestination": "@linkedService().SparkLogPath",
+			"newClusterInitScripts": []
+		}
+	}
+}

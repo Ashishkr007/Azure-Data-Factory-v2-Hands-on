@@ -1,0 +1,121 @@
+{
+	"name": "databricks-notebook-exec-example",
+	"properties": {
+		"activities": [
+			{
+				"name": "is Debug",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@pipeline().parameters.isDebug",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Execute DB notebook with Job cluster",
+							"type": "DatabricksNotebook",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.01:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": {
+									"value": "@pipeline().parameters.notebookPath",
+									"type": "Expression"
+								},
+								"baseParameters": {
+									"sourceName": {
+										"value": "@pipeline().parameters.source",
+										"type": "Expression"
+									},
+									"feedName": {
+										"value": "@pipeline().parameters.feed",
+										"type": "Expression"
+									},
+									"fileFormat": {
+										"value": "@pipeline().parameters.fileFormat",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "Dev_Job_Cluster",
+								"type": "LinkedServiceReference"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Execute DB notebook with Interactive cluster",
+							"type": "DatabricksNotebook",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.01:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": {
+									"value": "@pipeline().parameters.notebookPath",
+									"type": "Expression"
+								},
+								"baseParameters": {
+									"sourceName": {
+										"value": "@pipeline().parameters.source",
+										"type": "Expression"
+									},
+									"feedName": {
+										"value": "@pipeline().parameters.feed",
+										"type": "Expression"
+									},
+									"fileFormat": {
+										"value": "@pipeline().parameters.fileFormat",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "Dev_Interactive_cluster",
+								"type": "LinkedServiceReference"
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"notebookPath": {
+				"type": "string",
+				"defaultValue": "/Users/riveriq/ADF-Demo/HelloWorldNotebook"
+			},
+			"source": {
+				"type": "string",
+				"defaultValue": "finance"
+			},
+			"feed": {
+				"type": "string",
+				"defaultValue": "claim"
+			},
+			"fileFormat": {
+				"type": "string",
+				"defaultValue": "csv"
+			},
+			"isDebug": {
+				"type": "bool",
+				"defaultValue": false
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
