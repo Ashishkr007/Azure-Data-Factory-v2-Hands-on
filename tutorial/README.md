@@ -1,1 +1,1 @@
-- [Execute Databricks Notebook (Job/Interactive cluster)](execute-databricks-notebook/README.md)
+* [Execute Databricks Notebook (Job/Interactive cluster)](execute-databricks-notebook/README.md)
