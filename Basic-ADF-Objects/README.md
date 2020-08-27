@@ -6,15 +6,7 @@
 	* [EventHubsConf](#eventhubsconf)
 * [Creating a Direct Stream](#creating-a-direct-stream)
 
-
 ## Linked Service
-
-### [Azure Data Lake Storage Gen2 Linked Service](linkedService/ADLSConnection.json) 
-![ADLS2-Linked-Service](images/ADLS2-Linked-Service2.png "ADLS2-Linked-Service")
-### [Azure Key Vault linked service](linkedService/DevKeyVault.json)
-![Key-Vault-Linked-Service](images/Key-Vault-Linked-Service2.png "Key-Vault-Linked-Service")
-
-# Linked Service
 ### [Azure Data Lake Storage Gen2 Linked Service](linkedService/ADLSConnection.json) 
 ![ADLS2-Linked-Service](images/ADLS2-Linked-Service2.png "ADLS2-Linked-Service")
 ### [Azure Key Vault linked service](linkedService/DevKeyVault.json)
