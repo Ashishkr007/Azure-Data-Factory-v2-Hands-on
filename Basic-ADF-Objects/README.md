@@ -8,7 +8,7 @@
 * [Dataset](#Dataset)
 	* [Azure Data Lake Storage Gen2 CSV Dataset](#Azure-Data-Lake-Storage-Gen2-CSV-Dataset)
 * [Pipeline](#Pipeline)
-	* [Copy Pipeline :: ADLS-ADLS :: CSV-CSV](#Copy-Pipeline-::-ADLS-ADLS-::-CSV-CSV)
+	* [Copy Pipeline :: ADLS-ADLS :: CSV-CSV](#Copy-Pipeline-:-:-ADLS-ADLS-:-:-CSV-CSV)
 * [Trigger](#Trigger)
 	* [Copy Pipeline Trigger](#Copy-Pipeline-Trigger)
 
