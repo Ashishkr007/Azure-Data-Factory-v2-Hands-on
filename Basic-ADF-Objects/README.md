@@ -3,8 +3,14 @@
 * [Linked Service](#Linked-Service)
 	* [Azure Data Lake Storage Gen2 Linked Service](#Azure-Data-Lake-Storage-Gen2-Linked-Service)
 	* [Azure Key Vault linked service](#Azure-Key-Vault-linked-service)
-	* [EventHubsConf](#eventhubsconf)
-* [Creating a Direct Stream](#creating-a-direct-stream)
+	* [Databricks Interactive Cluster Linked Service](#Databricks-Interactive-Cluster-Linked-Service)
+	* [Databricks Job Cluster Linked Service](#Databricks-Job-Cluster-Linked-Service)
+* [Dataset](#Dataset)
+	* [Azure Data Lake Storage Gen2 CSV Dataset](#Azure-Data-Lake-Storage-Gen2-CSV-Dataset)
+* [Pipeline](#Pipeline)
+	* [Copy Pipeline :: ADLS-ADLS :: CSV-CSV](#Copy-Pipeline-::-ADLS-ADLS-::-CSV-CSV)
+* [Trigger](#Trigger)
+	* [Copy Pipeline Trigger](#Copy-Pipeline-Trigger)
 
 ## Linked Service
 ### [Azure Data Lake Storage Gen2 Linked Service](linkedService/ADLSConnection.json) 
@@ -16,16 +22,16 @@
 ### Databricks Job Cluster Linked Service
 ![Databricks-Job-Cluster-Linked-Service](images/Databricks-Job-Cluster-Linked-Service.png "Databricks-Job-Cluster-Linked-Service")
 
-# Dataset
+## Dataset
 ### [Azure Data Lake Storage Gen2 CSV Dataset](dataset/ADLS_CSV_File.json) 
 ![ADLS2-CSV-Dataset](images/ADLS2-CSV-Dataset.png "ADLS2-CSV-Dataset")
 
-# Pipeline
+## Pipeline
 ### [Copy Pipeline :: ADLS-ADLS :: CSV-CSV](pipeline/Copy-Data.json) 
 ![ADLS-CSV-Copy-Pipeline-1](images/ADLS-CSV-Copy-Pipeline-1.png "ADLS-CSV-Copy-Pipeline-1")
 
 ![ADLS-CSV-Copy-Pipeline-2](images/ADLS-CSV-Copy-Pipeline-2.png "ADLS-CSV-Copy-Pipeline-2")
 
-# Trigger
+## Trigger
 ### [Copy Pipeline Trigger](trigger/Test-Copy-Trigger.json)
 ![Pipeline-Trigger](images/Pipeline-Trigger.png "Pipeline-Trigger")
