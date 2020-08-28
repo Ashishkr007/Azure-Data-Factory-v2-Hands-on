@@ -1,1 +1,2 @@
-* [Execute Databricks Notebook (Job/Interactive cluster)](execute-databricks-notebook/README.md)
+* Pipeline
+  - [Execute Databricks Notebook (Job/Interactive cluster)](execute-databricks-notebook)
