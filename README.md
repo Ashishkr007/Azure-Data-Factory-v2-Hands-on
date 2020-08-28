@@ -12,4 +12,5 @@
     - Trigger
         - [Copy Pipeline Trigger](Basic-ADF-Objects#Copy-Pipeline-Trigger)
 * Tutorial
-    - [Execute Databricks Notebook](tutorial/execute-databricks-notebook)
+    - Pipeline
+        - [Execute Databricks Notebook](tutorial/execute-databricks-notebook)
