@@ -1,7 +1,7 @@
 # Azure-Data-Factory-v2-Hands-on
 * Basic-ADF-Objects
     - Linked Service
-        - [Azure Data Lake Storage Gen2 Linked Service](linkedService/ADLSConnection.json) 
+        - [Azure Data Lake Storage Gen2 Linked Service](Basic-ADF-Objects#Azure-Data-Lake-Storage-Gen2-Linked-Service) 
         - [Azure Key Vault linked service](linkedService/DevKeyVault.json)
         - [Databricks Interactive Cluster Linked Service](linkedService/Dev_Interactive_cluster.json)
         - Databricks Job Cluster Linked Service 
