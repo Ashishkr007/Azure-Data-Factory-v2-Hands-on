@@ -11,4 +11,5 @@
         - [Copy Pipeline (ADLS to ADLS)](Basic-ADF-Objects#Copy-Pipeline-(ADLS-to-ADLS)) 
     - Trigger
         - [Copy Pipeline Trigger](Basic-ADF-Objects#Copy-Pipeline-Trigger)
-
+* Tutorial
+    - [Execute Databricks Notebook](tutorial/execute-databricks-notebook)
